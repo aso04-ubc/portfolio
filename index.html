@@ -231,6 +231,16 @@
             line-height: 1.6;
         }
 
+        /* Added list styling for formatted descriptions */
+        .experience-description ul, .project-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .experience-description li, .project-description li {
+            margin-bottom: 0.5rem;
+        }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -308,10 +318,12 @@
             font-size: 0.9rem;
             margin-bottom: 1rem;
             opacity: 0.9;
+            font-weight: 600;
         }
 
         .project-description {
             line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         .contact-content {
@@ -420,6 +432,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
+                <li><a href="#design-teams">Design Teams</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -503,6 +516,26 @@
             </div>
         </section>
 
+        <section id="design-teams" class="section">
+            <div class="container">
+                <h2>Engineering Design Teams</h2>
+                <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="experience-title">F1TENTH Team Member</div>
+                        <div class="experience-company">ROS2, Python, C++</div>
+                        <div class="experience-date">January 2026 – Present</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Developed modular ROS2 packages implementing real-time reactive self-driving algorithms using LiDAR and camera data, achieving stable lane following and robust obstacle avoidance via tuned PID control.</li>
+                                <li>Designed a LiDAR-based localization pipeline to estimate vehicle pose relative to walls and obstacles, leveraging vectorized computations to reduce latency and meet real-time control deadlines.</li>
+                                <li>Implemented a vision-only driving system, extracting image features to identify navigable free space and performing real-time path planning without LiDAR input.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="skills" class="section">
             <div class="container">
                 <h2>Technical Skills</h2>
@@ -558,19 +591,49 @@
                 <h2>Featured Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
+                        <div class="project-title">SAILOR</div>
+                        <div class="project-tech">SystemVerilog • C • Linux</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Designed and implemented iterative and fully pipelined SHA-256 cryptographic cores using SystemVerilog, packaged with an Avalon-MM slave wrapper to interface RTL logic with an ARM Cortex-A9 processor.</li>
+                                <li>Architected an SoC (System-on-Chip) system using Intel Platform Designer to bridge hardware accelerators with a Linux-based ARM subsystem, and implementing Memory-Mapped I/O communication drivers in C, utilizing mmap to interface user-space software with physical FPGA registers.</li>
+                                <li>Utilized MobaXterm and Serial UART protocols to perform remote system debugging and real-time hardware monitoring on a DE1-SoC development board.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-title">Kernel Development (OS161)</div>
+                        <div class="project-tech">C • MIPS</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Engineered a MIPS-based kernel, implementing the required subsystems for multi-threaded process execution and hardware-software interfacing.</li>
+                                <li>Implemented a Virtual File System (VFS) abstraction layer and file-handling logic to manage file tables, enabling robust I/O operations and persistent storage access.</li>
+                                <li>Developed and integrated kernel-level synchronization primitives to eliminate race conditions and manage shared kernel resources in a multi-processor environment.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-title">Neural Network on FPGA</div>
+                        <div class="project-tech">SystemVerilog • C</div>
+                        <div class="project-description">
+                            <ul>
+                                <li>Built a Multi-Layer Perceptron neural network accelerator using SystemVerilog, integrating the hardware with an embedded Nios II processor and SDRAM, capable of classifying MNIST digits.</li>
+                                <li>Designed state logic to compute dot products of input activations and weights in signed Q16.16 fixed point representation, then applying a ReLU activation function where applicable.</li>
+                                <li>Used a Python script to train the neural network using backpropagation and an Adam optimizer, exporting the biases and weights to be used in the design, which was fully capable of classifying the MNIST digit.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
                         <div class="project-title">PixelCNN++</div>
                         <div class="project-tech">Python • PyTorch • Deep Learning</div>
                         <div class="project-description">
                             Implemented advanced generative model with masked convolutions, gated ResNet blocks, and multi-scale U-Net connections. Added FiLM-based conditioning for class-conditional generation and optimized training pipelines with data parallelism and mixed-precision training.
                         </div>
                     </div>
-                    <div class="project-card">
-                        <div class="project-title">Neural Network on FPGA</div>
-                        <div class="project-tech">SystemVerilog • C • Hardware Design</div>
-                        <div class="project-description">
-                            Designed and implemented a Multi-Layer Perceptron accelerator capable of classifying MNIST digits. Integrated with Nios II processor and SDRAM, featuring custom state logic for Q16.16 fixed-point arithmetic and ReLU activation functions.
-                        </div>
-                    </div>
+
                     <div class="project-card">
                         <div class="project-title">Genome Assembly Automation</div>
                         <div class="project-tech">Python • Bioinformatics • Multiprocessing</div>
@@ -608,7 +671,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Augustin So. All rights reserved.</p>
+            <p>&copy; 2026 Augustin So. All rights reserved.</p>
         </div>
     </footer>
 
