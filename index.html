@@ -459,8 +459,8 @@
                 <h2>About Me</h2>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>I'm a passionate Computer Engineering student at the University of British Columbia, specializing in software development and machine learning. With hands-on experience in full-stack development, bioinformatics, and deep learning, I thrive on solving complex problems and building innovative solutions.</p>
-                        <p>Currently working as a Software Engineer at the Institute of Digital Medical Technology in Shanghai, I'm developing Business Intelligence tools for healthcare applications. My journey spans from genome assembly optimization to neural network acceleration on FPGAs.</p>
+                        <p>I'm a passionate Computer Engineering student at the University of British Columbia, specializing in software development, embedded systems, and machine learning. With hands-on experience in full-stack development, flight-control systems firmware, and hardware acceleration, I thrive on solving complex problems and building innovative solutions.</p>
+                        <p>Currently working as a Computer Vision Intern at Lal Bikes, I'm architecting control-box electrical systems and developing flight-control firmware for autonomous hydrofoils. My journey spans from system-on-chip cryptographic accelerators to embedded hardware and deep learning.</p>
                     </div>
                     <div class="about-stats">
                         <div class="stat-item">
@@ -488,6 +488,18 @@
             <div class="container">
                 <h2>Experience</h2>
                 <div class="experience-grid">
+                    <div class="experience-item">
+                        <div class="experience-title">Computer Vision Intern: Autonomous Electric Hydrofoil</div>
+                        <div class="experience-company">Lal Bikes — Sechelt, BC</div>
+                        <div class="experience-date">September 2026 – Present</div>
+                        <div class="experience-description">
+                            <ul>
+                                <li>Architected the control-box electrical system for a 24 V (7S, 131 Wh) auxiliary pack feeding a Teensy 4.1 flight controller, NVIDIA Jetson Orin Nano perception computer, LilyGo T-SIM7670G LTE/GNSS gateway, FlySky i-bus receiver, two Feetech ST-5420 bus servos, three A02-series ultrasonic altimeters, ICM-42688 IMU, lift-motor DAC interface, and water-ingress detectors.</li>
+                                <li>Developed the flight-control firmware for a rider-carrying hydrofoil over 27+ tagged releases: a 25 Hz control loop reading an ICM-42688 IMU over SPI, up to three UART ultrasonic altimeters, a FlySky i-bus receiver, and a Feetech half-duplex servo bus, driving elevator and rudder servos plus a DAC-controlled lift motor, with a worst-case loop time held under 350 µs.</li>
+                                <li>Designed a Teensy-Jetson link protocol (39-byte CRC-16 STATE frames at 25 Hz, COMMAND frames with clamp-and-count validation, 300 ms staleness timeout, resync) and the bank-authority arbitration that hands control to the Jetson under seven preconditions with latched hand-back, stick override, and self-test harness.</li>
+                            </ul>
+                        </div>
+                    </div>
                     <div class="experience-item">
                         <div class="experience-title">Software Engineer</div>
                         <div class="experience-company">Institute of Digital Medical Technology, Shanghai Yangtze Delta Innovation Institute</div>
@@ -671,7 +683,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Augustin So. All rights reserved.</p>
+            <p>© 2026 Augustin So. All rights reserved.</p>
         </div>
     </footer>
 
